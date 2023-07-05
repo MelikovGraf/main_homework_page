@@ -15,10 +15,10 @@ request url params:
  age: int
 
 # response: 
- ```[
+[
     “Str”,
     “Str”
-]``` 
+] 
 
 # Task:
 Сделать и в Rewrite, и в BreakPoint (можно отключить чтобы не стопило на каждом запросе)
@@ -34,12 +34,12 @@ request form data:
  age: int
  salary: int
 
-```response: 
+response: 
 {'name': name,
           'age': age,
           'salary': salary,
           'family': {'children': [['Alex', 24], ['Kate', 12]],
-                     'u_salary_1_5_year': salary * 4}}```
+                     'u_salary_1_5_year': salary * 4}}
 
 # Task:
 Сделать и в Rewrite, и в BreakPoint (можно отключить чтобы не стопило на каждом запросе)
@@ -55,11 +55,11 @@ request url params:
  age: int
  weight: int
 
-```response: 
+response: 
 {'name': name,
           'age': age,
           'daily_food': weight * 0.012,
-          'daily_sleep': weight * 2.5}```
+          'daily_sleep': weight * 2.5}
 
 # Task:
 Сделать и в Rewrite, и в BreakPoint (можно отключить чтобы не стопило на каждом запросе)
@@ -75,7 +75,7 @@ request url params:
  age: int
  salary: int
 
-```response: 
+response: 
 {'name': name,
           'age': age,
           'salary': salary,
@@ -85,7 +85,7 @@ request url params:
                               'dog':{'name':'Luky',
                                      'age': 4}},
                      'u_salary_1_5_year': salary * 4}
-          }```
+          }
 
 # Task:
 Сделать и в Rewrite, и в BreakPoint (можно отключить чтобы не стопило на каждом запросе)
@@ -95,7 +95,7 @@ request url params:
 ==================
 
 # Ex_5:
-```Method: GET
+Method: GET
 EndPoint: /object_info_4
 request url params: 
  name: str
@@ -105,7 +105,7 @@ request url params:
 response: 
 {'name': name,
           'age': int(age),
-          'salary': [salary, str(salary * 2), str(salary * 3)]}```
+          'salary': [salary, str(salary * 2), str(salary * 3)]}
 
 
 # Task:
@@ -124,7 +124,7 @@ request form data:
  age: int
  salary: int
 
-```response: 
+response: 
 {'start_qa_salary': salary,
           'qa_salary_after_6_months': salary * 2,
           'qa_salary_after_12_months': salary * 2.7,
@@ -133,7 +133,7 @@ request form data:
           'person': {'u_name': [user_name, salary, age],
                      'u_age': age,
                      'u_salary_5_years': salary * 4.2}
-          }```
+          }
 
 
 # Task:
