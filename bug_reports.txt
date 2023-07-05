@@ -1,0 +1,10 @@
+Bug id;
+Title;
+Description;
+Preconditions;
+Steps;
+Actual_result
+Expected result;
+Priority;
+Reproducibility;
+Attachmants.

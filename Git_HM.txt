@@ -1,0 +1,118 @@
+$ git init JSON
+$ git clone https://github.com/MelikovGraf/JSON.git
+$ touch new.json
+$ git add .
+$ git commit -m "new.json add"
+$ git push
+
+$ cat >> new.json
+{
+"name": "Graf",
+"surname": "Melikov",
+"age": 28,
+"count home animals": 0,
+"next salary": 25000
+}
+
+$ git add .
+$ git commit -m "new.json update"
+$ git push
+
+$ cat > preference.json
+{
+"film": "Revolver",
+"serial": "Lost",
+"food": "Pizza",
+"season": "Summer",
+"country": "Germany"
+}
+
+$ cat > skill.json
+{
+"soft skill": ["agile","homeworking","distantion workind"],
+"hard skill": ["postman", "json", "web-server"]
+}
+
+$ git add .
+$ git commit -m "new.json update 2.0"
+$ git push
+$ https://github.com/MelikovGraf/XML.git
+$ touch new.xml
+
+$ cat >> new.xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+ <name>Graf</name>
+ <surname>Melikov</surname>
+ <age>28</age>
+ <animals>
+	<dog>Johny</dog>
+	<cat>Lapka</cat>
+ </animals>
+ <next_salary>25000</next_salary>
+</xml>
+
+$ git add .
+$ git commit -m "new.xml"
+$ git push
+
+$ cat > preference.xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<film>Revolver</film>
+	<serial>Lost</serial>
+	<food>Pizza</food>
+	<season>Summer</season>
+	<country>Germany</country>
+</xml>
+
+$ cat > skill.xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <soft_skill>
+    <first>agile</first>
+    <second>homeworking</second>
+    <third>distantion workind</third>
+  </soft_skill>
+  <hard_skill> 
+    <first>postman</first>
+    <second>json</second>
+    <third>web-server</third>
+  <hard_skill>
+</xml>
+$ git add .
+$ git commit -m "update XML"
+$ git push
+
+$ git branch Postman
+$ git branch Jmeter
+$ git branch CheckLists
+$ git branch Bag_Reports
+$ git branch SQL
+$ git branch Charles
+$ git branch Mobile_testing
+$ git add .
+$ git commit -m "branches"
+$ git push
+$ git checkout Bag_Reports
+
+$ cat > bag_reports.txt
+1.  Bug id;
+2.  Title;
+3.  Description;
+4.  Preconditions;
+5.  Steps;
+6.  Actual_result
+7.  Expected result;
+8.  Priority;
+9.  Reproducibility;
+10. Attachmants.
+
+$ git add .
+$ git commit -m "branches"
+$ git push
+$ git checkout main
+$ git merge Bag_Reports
+$ git add .
+$ git commit -m "merge branches"
+$ git push
