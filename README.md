@@ -95,7 +95,7 @@ response:
 ==================
 
 # Ex_5:
-Method: GET
+''Method: GET
 EndPoint: /object_info_4
 request url params: 
  name: str
@@ -105,7 +105,7 @@ request url params:
 response: 
 {'name': name,
           'age': int(age),
-          'salary': [salary, str(salary * 2), str(salary * 3)]}
+          'salary': [salary, str(salary * 2), str(salary * 3)]}''
 
 
 # Task:
@@ -117,7 +117,7 @@ response:
 ==================
 
 # Ex_6:
-'Method: POST
+'''Method: POST
 EndPoint: /user_info_2
 request form data: 
  name: str
@@ -133,7 +133,7 @@ response:
           'person': {'u_name': [user_name, salary, age],
                      'u_age': age,
                      'u_salary_5_years': salary * 4.2}
-          }'
+          }'''
 
 
 # Task:
