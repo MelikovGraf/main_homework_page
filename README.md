@@ -15,10 +15,10 @@ request url params:
  age: int
 
 # response: 
-[
+ ```[
     “Str”,
     “Str”
-]
+] ```
 
 # Task:
 Сделать и в Rewrite, и в BreakPoint (можно отключить чтобы не стопило на каждом запросе)
