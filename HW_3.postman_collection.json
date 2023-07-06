@@ -530,12 +530,33 @@
 			"response": []
 		},
 		{
-			"name": "currency LONG WAIT",
+			"name": "currency",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
+							"// req.\r",
+							"// POST\r",
+							"// auth_token\r",
+							"\r",
+							"// Тесты:\r",
+							"// 1) Можете взять любой объект из присланного списка, используйте js random.\r",
+							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос.\r",
+							"//  ===================\r",
+							"// https://qna.habr.com/q/404000  js скрип для генирации рандомных значений в POST метод\r",
+							"var respData = pm.response.json();\r",
+							"\r",
+							"var randomCur_object = Math.floor(Math.random() * (respData.length+1));\r",
+							"// console.log(randomCur_object);\r",
+							"\r",
+							"// console.log(respData[randomCur_object]);\r",
+							"\r",
+							"var env_Cur_ID = respData[randomCur_object].Cur_ID;\r",
+							"// console.log(env_Cur_ID);\r",
+							"\r",
+							"pm.environment.set(\"Cur_ID\", env_Cur_ID);\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
@@ -556,10 +577,15 @@
 					]
 				},
 				"url": {
-					"raw": "{{url}}/currency",
+					"raw": "http://54.157.99.22:80/currency",
+					"protocol": "http",
 					"host": [
-						"{{url}}"
+						"54",
+						"157",
+						"99",
+						"22"
 					],
+					"port": "80",
 					"path": [
 						"currency"
 					]
