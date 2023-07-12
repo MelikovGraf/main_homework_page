@@ -1,4 +1,4 @@
-![Uploading image.png…](https://www.digitalocean.com/community/tutorials/how-to-insert-data-in-sql)
+![Image alt](https://www.digitalocean.com/community/tutorials/how-to-insert-data-in-sql)
 
 # Теория
 __SQL__ (Structured Query Language)
