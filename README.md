@@ -1,6 +1,6 @@
-Основные правила Markdown
+# Основные правила Markdown
 
-![g38817mqb1361](https://github.com/MelikovGraf/GIT/assets/98654937/53e71298-b451-4ab4-8c9a-337dab8438a6)
+![HD-wallpaper-ghibli-a·-github-topics-a·-github-cute-ghibli](https://github.com/MelikovGraf/GIT/assets/98654937/6cf897c3-7e6b-48b3-9220-128cf8b2c893)
 
 Заголовки и горизонтальные линии
 Заголовки H1–H6 выделяются в Markdown с помощью знаков решетки (диез/шарп). Можно просто поставить нужное количество решеток в начале строки, чтобы указать уровень. Или заключить строку с двух сторон по аналогии с HTML-тегами, кому как удобно.
