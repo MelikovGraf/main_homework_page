@@ -1,5 +1,4 @@
-![alt text](https://community-cdn-digitalocean-com.global.ssl.fastly.net/2JR76d9ekat59gaRqkBZUB8i)
-![alt text](https://community-cdn-digitalocean-com.global.ssl.fastly.net/2JR76d9ekat59gaRqkBZUB8i)
+
 ![alt text](https://github.com/MelikovGraf/GIT/assets/98654937/ad52c14b-53c0-4b72-8c70-d7dc90b6460f)
 # Теория
 
