@@ -1,4 +1,4 @@
-[Иллюстрация к проекту](![Uploading image.png…]())
+![Uploading 2JR76d9ekat59gaRqkBZUB8i.jpeg…]()
 
 # Теория
 __SQL__ (Structured Query Language)
