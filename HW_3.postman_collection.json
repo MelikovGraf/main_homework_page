@@ -439,7 +439,20 @@
 							"    \"salary\"\r",
 							"  ]\r",
 							"});\r",
-							"});"
+							"});\r",
+							"\r",
+							"//test\r",
+							"for (i in resp.family.children) {\r",
+							"if (pm.expect(pm.response.code).to.eql(200)) {    \r",
+							"     if (pm.expect(resp.family.children).to.be.ok) { \r",
+							"         console.log(\r",
+							"            resp.family.children[i][0]\r",
+							"         )\r",
+							"         }\r",
+							"         }\r",
+							"else if (pm.expect(pm.response.code).to.eql(500)) {continue}\r",
+							"else continue\r",
+							"};"
 						],
 						"type": "text/javascript"
 					}
@@ -486,7 +499,7 @@
 			"response": []
 		},
 		{
-			"name": "currency LONG WAIT",
+			"name": "currency",
 			"event": [
 				{
 					"listen": "test",
@@ -495,7 +508,7 @@
 							"var resp = pm.response.json();\r",
 							"var req = request.data\r",
 							"\r",
-							"var random = Math.floor(Math.random() * (resp.length+1));\r",
+							"var random = Math.floor(Math.random() * (resp.length));\r",
 							"var env_Cur_ID = resp[random].Cur_ID;\r",
 							"\r",
 							"pm.environment.set(\"Cur_ID\", env_Cur_ID);"
@@ -518,10 +531,15 @@
 					]
 				},
 				"url": {
-					"raw": "{{url2}}/currency",
+					"raw": "http://54.157.99.22:80/currency",
+					"protocol": "http",
 					"host": [
-						"{{url2}}"
+						"54",
+						"157",
+						"99",
+						"22"
 					],
+					"port": "80",
 					"path": [
 						"currency"
 					]
@@ -530,18 +548,35 @@
 			"response": []
 		},
 		{
-			"name": "curr by LONG WAIT",
+			"name": "curr by",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"var resp = pm.response.json();\r",
-							"var req = request.data\r",
-							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
+							"// 1) получить список валют:\r",
+							"// 2) итерировать список валют\r",
+							"// 3) в каждой итерации отправлять запрос на сервер для получения курса каждой валюты  \r",
+							"// 4) если возвращается 500 код, переходим к следующей итреации\r",
+							"// 5) если получаем 200 код, проверяем response json на наличие поля \"Cur_OfficialRate\"\r",
+							"// 6) если поле есть, пишем в консоль инфу про валюту в виде response \r",
+							"// {\r",
+							"//     \"Cur_Abbreviation\": str\r",
+							"//     \"Cur_ID\": int,\r",
+							"//     \"Cur_Name\": str,\r",
+							"//     \"Cur_OfficialRate\": float,\r",
+							"//     \"Cur_Scale\": int,\r",
+							"//     \"Date\": str\r",
+							"// }\r",
+							"resp = pm.response.json();\r",
+							"for (i in resp) {\r",
+							"if (pm.expect(pm.response.code).to.eql(500)) {continue}\r",
+							"else if (pm.expect(pm.response.code).to.eql(200)) {\r",
+							"     if (pm.expect(resp[i].Cur_OfficialRate).to.be.ok) { \r",
+							"         console.log(resp[i])}\r",
+							"    else continue\r",
+							"}\r",
+							"};"
 						],
 						"type": "text/javascript"
 					}
